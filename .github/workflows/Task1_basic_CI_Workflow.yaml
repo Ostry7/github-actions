@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  print_repo_name:
+  print_repo_details:
     runs-on: ubuntu-slim
     steps:
       - name: Checkout
@@ -14,4 +14,7 @@ jobs:
           echo "repo name: $GITHUB_REPOSITORY"
       - name: Print branch name
         run: |
-          echo "branch name: $GITHUB_REF_NAME"
+          echo "branch name: $GITHUB_REF_NAME"    #GITHUB_REF_NAME -> for push; GITHUB_HEAD_NAME -> for pull;
+      - name: Print SHA
+        run: |
+          echo "SHA: $GITHUB_SHA"
