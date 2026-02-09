@@ -5,10 +5,13 @@ on:
       - main
 jobs:
   print_repo_name:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Print repo name
         run: |
           echo "repo name: $GITHUB_REPOSITORY"
+      - name: Print branch name
+        run: |
+          echo "branch name: $GITHUB_REF_NAME"
