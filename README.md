@@ -14,3 +14,19 @@ Create a GitHub Actions workflow that:
 There are two ways to get branch name (depends on event type):
 - GITHUB_REF_NAME -> is used for push
 - GITHUB_HEAD_NAME -> is used for pull
+
+
+---
+
+
+## Task 2: Matrix Build
+
+Create a workflow that:
+- Runs on `pull_request`
+- Uses a matrix strategy to test the application on:
+  - Ubuntu
+  - macOS
+  - Windows
+- Tests at least two different Node.js versions
+
+---
