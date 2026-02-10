@@ -64,3 +64,13 @@ _Key points:_
 - you can use `include` and `exclude` to customize combinations
 - usefull for testing _cross-platform builds_, multiple Node/Python versions or different environments
 - Matrix variables are accessed with `${{ matrix.VARIABLE_NAME}}
+
+---
+
+## Task 3: Conditional Steps
+
+Create a workflow where:
+- One step runs **only if** the commit message contains `[skip-tests]`
+- Another step runs **only if** the workflow was triggered manually (`workflow_dispatch`)
+
+---
