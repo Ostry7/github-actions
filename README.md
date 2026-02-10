@@ -74,3 +74,8 @@ Create a workflow where:
 - Another step runs **only if** the workflow was triggered manually (`workflow_dispatch`)
 
 ---
+
+### Workflow description:
+- A job runs only on push when the commit message contains skip tests
+- A job runs only on manual trigger (workflow_dispatch)
+- Event type is always checked before accessing event-specific fields
