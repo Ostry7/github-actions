@@ -4,7 +4,7 @@ on: [workflow_dispatch, push]
 
 jobs:
   commit_contains_skip_tests:
-    if: ${{ contains(github.event.head_commit.message, 'skip tests')}}
+    if: ${{ contains(github.event.head_commit.message, 'skip tests')}} #test
     runs-on: ubuntu-slim
     steps:
       - run: echo "Skipping tests due to commit message" 
