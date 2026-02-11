@@ -67,7 +67,7 @@ _Key points:_
 
 ---
 
-## Task 3: Conditional Steps
+## Task 3: Conditional Steps [v]
 
 Create a workflow where:
 - One step runs **only if** the commit message contains `[skip-tests]`
@@ -79,3 +79,14 @@ Create a workflow where:
 - A job runs only on push when the commit message contains skip tests
 - A job runs only on manual trigger (workflow_dispatch)
 - Event type is always checked before accessing event-specific fields
+
+---
+
+## Task 4: Dependency Caching
+
+Create a CI workflow that:
+- Installs project dependencies
+- Uses GitHub Actions cache
+- Properly invalidates the cache when the lockfile changes
+
+---
