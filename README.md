@@ -116,7 +116,7 @@ At this point, the cache is created and available for future runs.
 - `npm ci` reuses the local cachem reducing network downloads and speeding up installation.
 
 
-## Task 5: Secrets and Environment Variables []
+## Task 5: Secrets and Environment Variables [v]
 
 Create a workflow that:
 - Uses a repository secret (e.g. `API_TOKEN`)
@@ -124,3 +124,29 @@ Create a workflow that:
 - Ensures the secret value is never printed to logs
 
 ---
+
+### How to set variables and secrets?
+
+Under the `Settings` in Github we can set variables and secrets, based on environment or current repository.
+
+### How to use variables and secrets in workflows?
+
+- For variables use:
+```yaml
+{{vars.__variableName__}}
+```
+
+- For secrets use:
+```yaml
+{{secrets.__secretName__}}
+```
+
+Example:
+```yaml
+
+      - name: Read Environment variable
+        run: echo "env_var ${{vars.VAR_API_KEY}}"
+
+      - name: Read Secrets
+        run: echo "secret ${{secrets.SECRET_API_KEY}}"
+```
