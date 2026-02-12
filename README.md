@@ -114,3 +114,13 @@ At this point, the cache is created and available for future runs.
 - The archive is downloaded from __GitHub Cache Storage__.
 - It is extracted to the specified path.
 - `npm ci` reuses the local cachem reducing network downloads and speeding up installation.
+
+
+## Task 5: Secrets and Environment Variables []
+
+Create a workflow that:
+- Uses a repository secret (e.g. `API_TOKEN`)
+- Exposes the secret as an environment variable to a single step
+- Ensures the secret value is never printed to logs
+
+---
