@@ -82,7 +82,7 @@ Create a workflow where:
 
 ---
 
-## Task 4: Dependency Caching
+## Task 4: Dependency Caching [v]
 
 Create a CI workflow that:
 - Installs project dependencies
@@ -90,3 +90,27 @@ Create a CI workflow that:
 - Properly invalidates the cache when the lockfile changes
 
 ---
+
+### Why caching?
+
+Caching speeds up workflows by reusing dependency files between successive job runs. Github Actions runner is empty each time it runs so __without a cache downloading dependencies takes longer - the cache prevent this.__
+
+### How it works?
+
+1. First run (cache miss)
+- the runner starts as a clean machine (without any cache).
+- `actions/cache` tries to restore the cache -> no match is found.
+- `npm ci` downloads dependencies from the npm registry
+- after the job completes, `actions/cache`:
+  - archives the specified patch (e.g. `~/.npm`)
+  - uploads it to __GitHub Cache Storage__
+  - Saves it under the provided `key`
+
+At this point, the cache is created and available for future runs.
+
+2. Subsequent runs (cache hit)
+- the runner starts as a clean machine.
+- `actions/cache` finds a cache matching the `key`.
+- The archive is downloaded from __GitHub Cache Storage__.
+- It is extracted to the specified path.
+- `npm ci` reuses the local cachem reducing network downloads and speeding up installation.
