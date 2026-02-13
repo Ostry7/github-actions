@@ -150,3 +150,12 @@ Example:
       - name: Read Secrets
         run: echo "secret ${{secrets.SECRET_API_KEY}}"
 ```
+
+## Task 6: Build and Upload Artifacts []
+
+Create a workflow that:
+- Builds the application
+- Uploads the build output as a workflow artifact
+- Makes the artifact available for download after the job completes
+
+---
