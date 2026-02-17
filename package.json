@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "## Task 1: Basic CI Workflow [v]",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ostry7/github-actions.git"
@@ -19,5 +16,9 @@
   "homepage": "https://github.com/Ostry7/github-actions#readme",
   "devDependencies": {
     "eslint": "^10.0.0"
-  }
+  },
+  "scripts": {
+  "build": "mkdir -p dist && echo 'Build successful' > dist/output.txt"
+}
+
 }
