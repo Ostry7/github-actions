@@ -1,6 +1,8 @@
 name: Task2_matrix_build
 
-on: [pull_request, push]
+on: 
+  workflow_dispatch:
+# changed: [pull_request, push]
 
 jobs:
   matrix:
