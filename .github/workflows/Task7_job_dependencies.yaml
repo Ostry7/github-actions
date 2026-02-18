@@ -27,6 +27,9 @@ jobs:
     needs: [prepare_env]
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        
       - name: Run tests
         run: |
           cd python-app
