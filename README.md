@@ -171,3 +171,12 @@ An **artifact** stores build results for later download. Use cases:
 Artifacts are not the same as cache:
 - **artifact** -> is used to store build outputs.
 - **cache** -> is used to speed up dependency installation.
+
+
+## Task 7: Job Dependencies []
+
+Create a workflow with at least **three jobs**, where:
+- The second job runs only if the first job succeeds
+- The third job runs **always**, even if one of the previous jobs fails
+
+---
