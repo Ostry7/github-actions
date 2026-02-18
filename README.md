@@ -173,10 +173,39 @@ Artifacts are not the same as cache:
 - **cache** -> is used to speed up dependency installation.
 
 
-## Task 7: Job Dependencies []
+## Task 7: Job Dependencies [v]
 
-Create a workflow with at least **three jobs**, where:
+Create a workflow with at least **two jobs**, where:
 - The second job runs only if the first job succeeds
 - The third job runs **always**, even if one of the previous jobs fails
 
 ---
+
+### Job dependencies in Github actions:
+
+When you define:
+```yaml
+job2:
+  needs: job1
+```
+
+It means:
+- `job2` waits for `job1` to finish
+- `job2` runs only if `job1` succeeds
+- if `job1` fails -> `job2` is automatically skipped
+
+We can force to run a job always using the:
+```yaml
+if: always()
+```
+Example:
+```yaml
+job3:
+  needs: [job1, job2]
+  if: always()
+```
+It means:
+- `job3` waits for both jobs to finish
+- it runs even if one or both failed
+- it is typically used for cleanup, notifications or reporting
+
