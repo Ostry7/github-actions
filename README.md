@@ -151,7 +151,7 @@ Example:
         run: echo "secret ${{secrets.SECRET_API_KEY}}"
 ```
 
-## Task 6: Build and Upload Artifacts []
+## Task 6: Build and Upload Artifacts [v]
 
 Create a workflow that:
 - Builds the application
@@ -159,3 +159,15 @@ Create a workflow that:
 - Makes the artifact available for download after the job completes
 
 ---
+
+### What are artifacts?
+
+An **artifact** stores build results for later download. Use cases:
+1. Log files and core dumps.
+2. Test results, failures and screenshoots.
+3. Binary or compressed files.
+4. Stress test performance. 
+
+Artifacts are not the same as cache:
+- **artifact** -> is used to store build outputs.
+- **cache** -> is used to speed up dependency installation.
