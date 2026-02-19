@@ -215,7 +215,7 @@ It means:
 Create a workflow that:
 - Runs on `push`
 - Performs a deploy step **only if**:
-  - The branch is `main`
+  - The branch is `development`
   - The workflow is not triggered from a fork
 - Skips the deploy step without failing the workflow in all other cases
 
