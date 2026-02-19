@@ -209,3 +209,14 @@ It means:
 - it runs even if one or both failed
 - it is typically used for cleanup, notifications or reporting
 
+
+## Task 8: Deploy Only from Main Branch []
+
+Create a workflow that:
+- Runs on `push`
+- Performs a deploy step **only if**:
+  - The branch is `main`
+  - The workflow is not triggered from a fork
+- Skips the deploy step without failing the workflow in all other cases
+
+---
