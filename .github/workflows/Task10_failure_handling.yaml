@@ -23,4 +23,10 @@ jobs:
       - name: FailureStep
         run: |
           exit 1
+      - name: Collect diagnostics
+        if: ${{ job.status == failure() }}
+        run:  |
+          echo "Job name: ${{ github.job }}"
+          echo "Job status: $ {{ github.status }}"
+          echo "Job started at: $ {{ github.run_started_at }}"
           
