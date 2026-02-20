@@ -281,7 +281,7 @@ with:
   retries: 5
 ```
 
-## Task 10: Failure Handling and Observability []
+## Task 10: Failure Handling and Observability [v]
 
 Create a workflow that:
 - Detects when a job fails
@@ -289,5 +289,4 @@ Create a workflow that:
   - Job name
   - Job status
   - Execution time
-
 ---
