@@ -210,7 +210,7 @@ It means:
 - it is typically used for cleanup, notifications or reporting
 
 
-## Task 8: Deploy Only from Main Branch []
+## Task 8: Deploy Only from Development Branch [v]
 
 Create a workflow that:
 - Runs on `push`
@@ -220,3 +220,5 @@ Create a workflow that:
 - Skips the deploy step without failing the workflow in all other cases
 
 ---
+
+Use `if: github.ref == 'refs/heads/development' && github.repository_owner ` to condition branch name.
