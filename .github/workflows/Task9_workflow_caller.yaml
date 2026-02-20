@@ -1,0 +1,12 @@
+name: Task9_workflow_caller
+
+on:
+  push:
+    branches:
+      - "development"
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/Task9_reusable_workflows.yaml
+    with:
+      environment: "pre-prod"
