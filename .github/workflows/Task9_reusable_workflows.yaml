@@ -1,7 +1,7 @@
 name: Task9_reusable_workflows
 
 on: 
-  workflow_dispatch:
+  workflow_call: 
 
     inputs:
       environment:
