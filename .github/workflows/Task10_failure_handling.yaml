@@ -27,6 +27,6 @@ jobs:
         if: always()
         run:  |
           echo "Job name: ${{ github.job }}"
-          echo "Job status: $ {{ github.status }}"
-          echo "Job started at: $ {{ github.run_started_at }}"
+          echo "Job status: $ {{ job.status }}"
+          echo "Job started at: $ {{ run_started_at }}"
           
