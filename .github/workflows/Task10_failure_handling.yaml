@@ -24,7 +24,7 @@ jobs:
         run: |
           exit 1
       - name: Collect diagnostics
-        if: ${{ job.status == failure() }}
+        if: always()
         run:  |
           echo "Job name: ${{ github.job }}"
           echo "Job status: $ {{ github.status }}"
