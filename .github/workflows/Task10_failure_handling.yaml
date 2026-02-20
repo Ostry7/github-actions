@@ -11,6 +11,11 @@ jobs:
       - name: Run
         run: |
           echo "Step 1..."
+      - name: Collect diagnostics
+        if: always()
+        run:  |
+          echo "Job name: ${{ github.job }}"
+          echo "Job status: ${{ job.status }}"
 
   failureJob:
     runs-on: ubuntu-slim
@@ -28,5 +33,4 @@ jobs:
         run:  |
           echo "Job name: ${{ github.job }}"
           echo "Job status: ${{ job.status }}"
-          echo "Job started at: ${{ github.run_started_at }}"
           
