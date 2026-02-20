@@ -3,7 +3,7 @@ name: Task9_workflow_caller
 on:
   push:
     branches:
-      - "development"
+      - "main"
 
 jobs:
   call-workflow:
