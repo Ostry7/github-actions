@@ -280,3 +280,14 @@ Use:
 with:
   retries: 5
 ```
+
+## Task 10: Failure Handling and Observability []
+
+Create a workflow that:
+- Detects when a job fails
+- Collects basic diagnostic information:
+  - Job name
+  - Job status
+  - Execution time
+
+---
