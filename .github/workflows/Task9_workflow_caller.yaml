@@ -1,9 +1,6 @@
 name: Task9_workflow_caller
 
-on:
-  push:
-    branches:
-      - "main"
+on: [workflow_dispatch]
 
 jobs:
   call-workflow:
