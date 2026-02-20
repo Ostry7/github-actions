@@ -222,3 +222,17 @@ Create a workflow that:
 ---
 
 Use `if: github.ref == 'refs/heads/development' && github.repository_owner ` to condition branch name.
+
+
+---
+
+## Task 9: Reusable Workflows []
+
+Create:
+- One reusable workflow that:
+  - Accepts input parameters (e.g. environment name, application version)
+- Another workflow that:
+  - Calls the reusable workflow
+  - Passes custom values for the inputs
+
+---
