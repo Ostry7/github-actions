@@ -226,7 +226,7 @@ Use `if: github.ref == 'refs/heads/development' && github.repository_owner ` to 
 
 ---
 
-## Task 9: Reusable Workflows []
+## Task 9: Reusable Workflows [v]
 
 Create:
 - One reusable workflow that:
@@ -236,3 +236,47 @@ Create:
   - Passes custom values for the inputs
  
 ---
+
+### Types of input parameters:
+1. `String`:
+```yaml
+inputs:
+  environment:
+    description: "Environment to deploy to"
+    required: true
+    type: string
+    default: "production"
+```
+Use:
+```yaml
+with:
+  environment: "pre-prod"
+```
+2. `boolean`:
+```yaml
+inputs:
+  run_tests:
+    description: "Whether to run tests"
+    required: false
+    type: boolean
+    default: true
+```
+Use:
+```yaml
+with:
+  run_tests: false
+```
+3. `number`:
+```yaml
+inputs:
+  retries:
+    description: "Number of retry attempts"
+    required: false
+    type: number
+    default: 3
+```
+Use:
+```yaml
+with:
+  retries: 5
+```
